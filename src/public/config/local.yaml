@@ -1,1 +1,8 @@
 app:
+  datasource:
+    host: localhost
+    port: 3306
+    database: visaurus
+    username: root
+    password: secret
+    params: parseTime=true&multiStatements=true
