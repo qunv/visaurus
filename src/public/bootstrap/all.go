@@ -2,6 +2,7 @@ package bootstrap
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/qunv/visaurus/adapter/repositories"
 	"github.com/qunv/visaurus/core"
 	"github.com/qunv/visaurus/public/app"
 	"github.com/qunv/visaurus/public/controllers"
@@ -18,6 +19,10 @@ func All() fx.Option {
 
 		// init datasource
 		datasource.DatasourceOpt(),
+
+
+		//init repository
+		fx.Provide(repositories.NewWordRepositories),
 
 		//init gin
 		fx.Provide(gin.New),

@@ -4,6 +4,7 @@ go 1.19
 
 require (
 	github.com/gin-gonic/gin v1.8.1
+	github.com/qunv/visaurus/adapter v0.0.0-00010101000000-000000000000
 	github.com/qunv/visaurus/core v0.0.0-00010101000000-000000000000
 	go.uber.org/fx v1.18.1
 	gorm.io/driver/mysql v1.3.6
@@ -54,4 +55,7 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/qunv/visaurus/core => ./../core
+replace (
+	github.com/qunv/visaurus/adapter => ./../adapter
+	github.com/qunv/visaurus/core => ./../core
+)
